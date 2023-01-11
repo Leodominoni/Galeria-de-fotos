@@ -11,23 +11,36 @@
     <title>Galeria de Fotos</title>
 </head>
 <body>
+
     <header>
         <div class="logo">
         <img class="logo" src="images/logo.png">
         </div>
         <navbar class="menu">
             <a class="menu-item" href="#">Sobre</a>
-            <a class="menu item" href="#">Contato</a>
+            <a class="menu-item" href="#">Contato</a>
         </navbar>
     </header>
-
+    <div class="dark-mode">
+        <input type="checkbox" class="checkbox checkbox-config" id="chk"/>
+        <label class="label" for="chk">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+        </label>    
+    </div>
+ 
 <h1 class="titulo">Galeria de Fotos</h1>    
 <p class="descricao">Fotografo: Marcelo Apablaza</p>
 <p class="descricao">Fotos tiradas com Camera Canon</p>
-<div class="galeria">
-    <img src="images/img1.JPG" class="item-galeria">Natal 2023
-</div>
+    <div class="container-galeria">
+        <div class="item-galeria">
+            <img src="images/img1.JPG" alt="natal" class="img-galeria">
+            <span class="titulo-galeria">Natal 2023</span> 
+        </div>
+    </div>
 
 </body>
 <script src="script.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script></script>
 </html>
