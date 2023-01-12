@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@
 body{
   width: 100%;
   height: 100vh;
+  background-color: lightgrey;
 }
 body.dark{
   background: #232c35;
@@ -16,10 +18,11 @@ header{
   font-family: 'Ubuntu', sans-serif;
   display: flex;
   justify-content: space-between;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.863);
   font-size: 20px;
   align-items: center;
 }
+/* Botão Dark-Light */
 .checkbox{
   opacity: 0;
   position: absolute;
@@ -33,7 +36,6 @@ header{
   transition: background 0.2s linear;
   transition: color 0.2 linear;
 }
-
 .label{
   background: #111;
   cursor: pointer;
@@ -63,17 +65,16 @@ header{
 .checkbox:checked + .label .ball{
   transform: translate(24px);
 }
-
 .fa-moon{
-  color: #8C6B42;
+  color: #DD901C;
 }
-
 .fa-sun{
-  color: #f39c12;
+  color: #fcf80a;
 }
+/* Cabeçalho */
 .logo{
-  max-width: 200px;
-  max-height: 100px;
+  max-width: 150px;
+  max-height: 120px;
   object-fit: cover;
 }
 .menu-item{
@@ -84,7 +85,80 @@ header{
 .menu-item:hover{
   color:#8C6B42;
 }
+/* Cards */
+.container-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.card{
+  width: 180px;
+  height: 180px;
+  position: relative;
+  background: url(images/Pessoas/people1.png) center;
+  background-size: cover;
+  color: white;
+}
+.card-um{
+  width: 180px;
+  height: 180px;
+  position: relative;
+  background: url(images/Animal/animal1.JPG) center;
+  background-size: cover;
+  color: white;
+}
+.card-dois{
+  width: 180px;
+  height: 180px;
+  position: relative;
+  background: url(images/Natureza/natureza1.JPG) center;
+  background-size: cover;
+  color: white;
+}
+.card-tres{
+  width: 180px;
+  height: 180px;
+  position: relative;
+  background: url(images/Detalhes/detalhes2.JPG) center;
+  background-size: cover;
+  color: white;
+}
 
+.card .card-fundo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin: 8px;
+  width: 90%;
+  height: 90%;
+  background-color: #3c5166;
+  opacity: 0;
+  transition: 0.4s;
+}
+.card:hover .card-fundo{
+  opacity: 0.9;
+}
+.btn-card{
+  padding: 5px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #109b3e;
+  font-size: 18pt;
+  font-family: 'Rubik', sans-serif;
+}
+
+.titulo-link{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 55px;
+  text-align: center;
+  color: black; 
+}
 .titulo{
   font-family: 'Ubuntu', sans-serif;
   margin: 2px;
@@ -92,15 +166,57 @@ header{
   text-align: center;
 }
 .descricao{
-  text-align: right;
+  text-align: center;
   font-size: 15px;
   font-family: 'Roboto Mono', monospace;
 }
+/*  Galeria de Fotos */
 .container-galeria{
-  box-sizing: border-box;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(6,1fr);
+  grid-auto-rows: 300px;
 }
-img{
-  max-width: 450px;
+.img-galeria{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.item-galeria{
+  margin: 5px;
+}
+.item-galeria .titulo-galeria{
+  position: relative;
+  background-color: #232c35;
+  opacity: 0.8;
+  bottom: 40px;
+  left: 0;
+  color: #f39c12;
+  padding: 10px;
+  font-size: 16pt;
+  font-family: 'Ubuntu', sans-serif;
+}
+.h-1{
+  grid-row: span 1; /* Linha */
+}
+.h-2{
+  grid-row: span 2; /* Linha */
+}
+.w-1{
+  grid-column: span 1; /*Coluna*/
+}
+.w-2{
+  grid-column: span 2; /*Coluna*/
+}
+@media(max-width:768px){
+  .container-galeria{
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-rows:50vh ;
+  }
+  .h-2{
+    grid-row: span 1; /* Linha */
+  }
+  .w-2{
+    grid-column: span 1; /* Coluna */
+  }
 }
