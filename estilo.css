@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+:root{
+  --cor1: #04021C;
+  --cor2: #040740;
+  --cor3: #1F4373;
+  --cor4: #376BBC;
+  --cor5: #b6b6b6;
+  --cor6: #ffffff;
+  --cor7: #A3AEB5;
+  --cor8: #3c5166;
+}
 *{
   margin: 0;
   padding: 0;
@@ -8,17 +18,17 @@
 body{
   width: 100%;
   height: 100vh;
-  background-color: lightgrey;
+  background-color: var(--cor7);
 }
 body.dark{
-  background: #232c35;
-  color: rgba(252, 245, 236, 0.911);
+  background: var(--cor2);
+  color: var(--cor7);
 }
 header{
   font-family: 'Ubuntu', sans-serif;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.863);
+  background-color: var(--cor1);
   font-size: 20px;
   align-items: center;
 }
@@ -26,7 +36,7 @@ header{
 .checkbox{
   opacity: 0;
   position: absolute;
-  vertical-align: top
+  vertical-align: top;
 }
 .dark-mode{
   height: 10vh;
@@ -38,7 +48,7 @@ header{
   transition: color 0.2 linear;
 }
 .label{
-  background: #111;
+  background: var(--cor1);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -50,7 +60,7 @@ header{
   transform: scale(1.5);
 }
 .label .ball{
-  background: aliceblue;
+  background: var(--cor5);
   position: absolute;
   top: 2px;
   height: 22px;
@@ -74,12 +84,12 @@ header{
   object-fit: cover;
 }
 .menu-item{
-  color: white;
+  color: var(--cor7);
   text-decoration: none;
   margin-right: 10px;
 }
 .menu-item:hover{
-  color:#8C6B42;
+  color:var(--cor3);
 }
 /* Cards */
 .container-card{
@@ -97,7 +107,7 @@ header{
   position: relative;
   background: url(images/Pessoas/people1.png) center;
   background-size: cover;
-  color: white;
+
 }
 .card-um{
   width: 180px;
@@ -105,7 +115,7 @@ header{
   position: relative;
   background: url(images/Animal/animal1.JPG) center;
   background-size: cover;
-  color: white;
+
 }
 .card-dois{
   width: 180px;
@@ -113,7 +123,7 @@ header{
   position: relative;
   background: url(images/Natureza/natureza1.JPG) center;
   background-size: cover;
-  color: white;
+
 }
 .card-tres{
   width: 180px;
@@ -121,7 +131,7 @@ header{
   position: relative;
   background: url(images/Detalhes/detalhes2.JPG) center;
   background-size: cover;
-  color: white;
+
 }
 .card .card-fundo{
   display: flex;
@@ -132,7 +142,7 @@ header{
   margin: 8px;
   width: 90%;
   height: 90%;
-  background-color: #3c5166;
+  background-color: var(--cor8);
   opacity: 0;
   transition: 0.4s;
 }
@@ -142,7 +152,7 @@ header{
 .btn-card{
   padding: 5px;
   text-decoration: none;
-  color: #fff;
+  color: var(--cor6);
   background-color: #109b3e;
   font-size: 18pt;
   font-family: 'Rubik', sans-serif;
@@ -151,11 +161,10 @@ header{
   font-family: 'Ubuntu', sans-serif;
   margin: 2px;
   font-size: 55px;
-  color: black;
   text-align: center;
 }
 .titulo:hover{
-  color: #8C6B42;
+  color: var(--cor3);
 }
 .descricao{
   text-align: center;
@@ -176,11 +185,11 @@ header{
 }
 .descricao-fotografo{
   text-indent: 15px;
+  line-height: 25px;
   margin-right: 20px;
   font-size: 20px;
   margin-top: 10%;
   font-family: 'Roboto Mono', monospace;
-  color: #111;
 }
 /*  Galeria de Fotos */
 .container-galeria{
