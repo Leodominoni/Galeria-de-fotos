@@ -121,7 +121,7 @@ header{
   width: 180px;
   height: 180px;
   position: relative;
-  background: url(images/Natureza/natureza1.JPG) center;
+  background: url(images/Natureza/natureza8.JPG) center;
   background-size: cover;
 
 }
@@ -191,6 +191,16 @@ header{
   margin-top: 10%;
   font-family: 'Roboto Mono', monospace;
 }
+footer{
+  height: 25px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--cor1);
+  color: var(--cor7);
+  font-family: 'Roboto Mono', monospace;
+  padding: 8px;
+
+}
 /*  Galeria de Fotos */
 .container-galeria{
   width: 100%;
@@ -229,6 +239,10 @@ header{
 .w-2{
   grid-column: span 2; /*Coluna*/
 }
+.w-3{
+  grid-column: span 3;
+}
+
 @media(max-width:768px){
   .container-galeria{
     grid-template-columns: repeat(1,1fr);
@@ -239,6 +253,9 @@ header{
   }
   .w-2{
     grid-column: span 1; /* Coluna */
+  }
+  .w-3{
+    grid-column: span 1;
   }
   .container-fotografo{
     display: block;
